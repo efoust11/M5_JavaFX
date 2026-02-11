@@ -1,0 +1,36 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar",
+            "c:\\Users\\ekfou\\Desktop\\JavaClass\\javafx-sdk-17.0.18\\lib\\javafx.base.jar",
+            "c:\\Users\\ekfou\\Desktop\\JavaClass\\javafx-sdk-17.0.18\\lib\\javafx.controls.jar",
+            "c:\\Users\\ekfou\\Desktop\\JavaClass\\javafx-sdk-17.0.18\\lib\\javafx.fxml.jar",
+            "c:\\Users\\ekfou\\Desktop\\JavaClass\\javafx-sdk-17.0.18\\lib\\javafx.graphics.jar",
+            "c:\\Users\\ekfou\\Desktop\\JavaClass\\javafx-sdk-17.0.18\\lib\\javafx.media.jar",
+            "c:\\Users\\ekfou\\Desktop\\JavaClass\\javafx-sdk-17.0.18\\lib\\javafx.swing.jar",
+            "c:\\Users\\ekfou\\Desktop\\JavaClass\\javafx-sdk-17.0.18\\lib\\javafx.web.jar",
+            "c:\\Users\\ekfou\\Desktop\\JavaClass\\javafx-sdk-17.0.18\\lib\\javafx-swt.jar"
+        ],
+        "exclude": [
+            "lib/javafx-swt.jar",
+            "c:\\Users\\ekfou\\Desktop\\JavaClass\\javafx-sdk-17.0.18\\lib\\javafx-swt.jar",
+            "c:\\Users\\ekfou\\Desktop\\JavaClass\\javafx-sdk-17.0.18\\lib\\javafx.base.jar",
+            "c:\\Users\\ekfou\\Desktop\\JavaClass\\javafx-sdk-25.0.2\\lib\\javafx.base.jar",
+            "lib/javafx.base.jar",
+            "lib/javafx.controls.jar",
+            "c:\\Users\\ekfou\\Desktop\\JavaClass\\javafx-sdk-17.0.18\\lib\\javafx.controls.jar",
+            "c:\\Users\\ekfou\\Desktop\\JavaClass\\javafx-sdk-25.0.2\\lib\\javafx.controls.jar",
+            "c:\\Users\\ekfou\\Desktop\\JavaClass\\javafx-sdk-17.0.18\\lib\\javafx.fxml.jar",
+            "lib/javafx.fxml.jar",
+            "lib/javafx.graphics.jar",
+            "c:\\Users\\ekfou\\Desktop\\JavaClass\\javafx-sdk-25.0.2\\lib\\javafx.graphics.jar",
+            "c:\\Users\\ekfou\\Desktop\\JavaClass\\javafx-sdk-17.0.18\\lib\\javafx.media.jar",
+            "lib/javafx.media.jar",
+            "c:\\Users\\ekfou\\Desktop\\JavaClass\\javafx-sdk-25.0.2\\lib\\javafx.swing.jar",
+            "lib/javafx.swing.jar",
+            "lib/javafx.web.jar"
+        ]
+    }
+}
