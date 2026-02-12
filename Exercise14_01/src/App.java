@@ -10,11 +10,14 @@ public class App extends Application {
 
     @Override
     public void start(Stage primaryStage){
+        //creating the grid pane
         GridPane pane = new GridPane();
         pane.setPadding(new Insets(5, 5, 5, 5));
 
         pane.setVgap(5); 
         pane.setHgap(5); 
+
+        //importing images
         Image image1 = new Image("Images/flag1.gif");
         Image image2 = new Image("Images/flag2.gif");
         Image image3 = new Image("Images/flag6.gif");
@@ -25,6 +28,7 @@ public class App extends Application {
         ImageView imageView3 = new ImageView(image3);
         ImageView imageView4 = new ImageView(image4);
 
+        //each image is set to the same size and placed in the grid
         imageView1.setFitHeight(100);
         imageView1.setFitWidth(200);
         pane.add(imageView1, 0, 0);
@@ -41,9 +45,8 @@ public class App extends Application {
         imageView4.setFitWidth(200);
         pane.add(imageView4, 1, 1);     
     
-    
+        //creating the scene
         Scene scene = new Scene(pane);
-        primaryStage.setTitle("ShowImage"); 
         primaryStage.setScene(scene); 
         primaryStage.show(); 
 
