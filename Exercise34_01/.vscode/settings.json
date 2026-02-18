@@ -1,0 +1,17 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\ekfou\\Desktop\\JavaClass\\javafx-sdk-17.0.18\\lib\\javafx.base.jar",
+        "c:\\Users\\ekfou\\Desktop\\JavaClass\\javafx-sdk-17.0.18\\lib\\javafx.controls.jar",
+        "c:\\Users\\ekfou\\Desktop\\JavaClass\\javafx-sdk-17.0.18\\lib\\javafx.fxml.jar",
+        "c:\\Users\\ekfou\\Desktop\\JavaClass\\javafx-sdk-17.0.18\\lib\\javafx.graphics.jar",
+        "c:\\Users\\ekfou\\Desktop\\JavaClass\\javafx-sdk-17.0.18\\lib\\javafx.media.jar",
+        "c:\\Users\\ekfou\\Desktop\\JavaClass\\javafx-sdk-17.0.18\\lib\\javafx.swing.jar",
+        "c:\\Users\\ekfou\\Desktop\\JavaClass\\javafx-sdk-17.0.18\\lib\\javafx.web.jar",
+        "c:\\Users\\ekfou\\Desktop\\JavaClass\\javafx-sdk-17.0.18\\lib\\javafx-swt.jar",
+        "c:\\book\\lib\\mysql-connector-j-9.6.0\\mysql-connector-j-9.6.0.jar",
+        "c:\\book\\lib\\ojbdc.jar\\ojdbc17.jar"
+    ]
+}
