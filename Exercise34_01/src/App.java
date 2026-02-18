@@ -87,6 +87,64 @@ public class App extends Application{
             }
         });
 
+        btnClear.setOnAction(e ->{
+            tf_id.setText("");
+            tf_last.setText("");
+            tf_first.setText("");
+            tf_mi.setText("");
+            tf_address.setText("");
+            tf_city.setText("");
+            tf_State.setText("");
+            tf_Telephone.setText("");
+        });
+
+        btnUpdate.setOnAction(e ->{
+            String id = tf_id.getText();
+            System.out.println(tf_address.getText());
+            try {
+
+                String update = "update staff set lastName = '" + tf_last.getText() + "', firstName = '" + tf_first.getText() +
+                        "', mi = '" + tf_mi.getText() + "', address = '" + tf_address.getText() + "', city = '" + tf_city.getText() +
+                        "', state = '" + tf_State.getText() + "', telephone = '" + tf_Telephone.getText() + "' where id = '" + id + "'";
+
+                //System.out.println(update);
+                statement.executeUpdate(update);
+
+            } catch(SQLException e1){
+                errorText.setText("Record not found.");
+                e1.printStackTrace();
+            }
+        });
+
+        btnInsert.setOnAction(e->{
+            try {
+
+                String insert = "insert into staff (id, lastName, firstName, mi, address, city, state, telephone) values ('" + 
+                tf_id.getText() + "', '" +
+                tf_last.getText() + "', '" + tf_first.getText() +
+                        "', '" + tf_mi.getText() + "', '" + tf_address.getText() + "', '" + tf_city.getText() +
+                        "', '" + tf_State.getText() + "', '" + tf_Telephone.getText() +"')";
+                //        "?,?,?,?,?,?,?,?)";
+
+                //PreparedStatement preparedStatement = connection.prepareStatement(insert);
+                //preparedStatement.setString(1, tf_id.getText());
+                //preparedStatement.setString(2, tf_last.getText());
+                //preparedStatement.setString(3, tf_first.getText());
+                //preparedStatement.setString(4, tf_mi.getText());
+                //preparedStatement.setString(5, tf_address.getText());
+                //preparedStatement.setString(6, tf_city.getText());
+                //preparedStatement.setString(7, tf_State.getText());
+                //preparedStatement.setString(8, tf_Telephone.getText());
+
+                statement.executeUpdate(insert);
+                
+
+            } catch(SQLException e1){
+                errorText.setText("Record not found.");
+                e1.printStackTrace();
+            }
+        });
+
         //creating the scene
         Scene scene = new Scene(pane);
         primaryStage.setScene(scene); 
