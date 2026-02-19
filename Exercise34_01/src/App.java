@@ -9,12 +9,14 @@ import javafx.stage.Stage;
 import java.sql.*;
 
 public class App extends Application{
-
+ 
     @Override 
     public void start(Stage primaryStage) throws SQLException{
+        //Grid Pane for GUI
         GridPane pane = new GridPane();
         pane.setPadding(new Insets(5, 5, 5, 5));
 
+        //Text Fields for each value 
         Text errorText = new Text("");
         pane.add(errorText, 0, 0);
 
@@ -50,6 +52,7 @@ public class App extends Application{
         pane.add(new Text("Telephone:"), 0, 5);
         pane.add(tf_Telephone,1,5);
 
+        //Buttons
         Button btnView = new Button("View");
         Button btnInsert = new Button("Insert");
         Button btnUpdate = new Button("Update");
@@ -60,9 +63,11 @@ public class App extends Application{
         pane.add(btnUpdate, 3,6);
         pane.add(btnClear, 4,6);
 
+        //Connecting to database
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/exercise3401","root","");
         Statement statement = connection.createStatement();
 
+        //View a entry based on ID
         btnView.setOnAction(e -> {
             String id = tf_id.getText();
             try {
@@ -87,6 +92,7 @@ public class App extends Application{
             }
         });
 
+        //Clear all text fields
         btnClear.setOnAction(e ->{
             tf_id.setText("");
             tf_last.setText("");
@@ -98,6 +104,7 @@ public class App extends Application{
             tf_Telephone.setText("");
         });
 
+        //Update entry based on ID
         btnUpdate.setOnAction(e ->{
             String id = tf_id.getText();
             System.out.println(tf_address.getText());
@@ -107,7 +114,6 @@ public class App extends Application{
                         "', mi = '" + tf_mi.getText() + "', address = '" + tf_address.getText() + "', city = '" + tf_city.getText() +
                         "', state = '" + tf_State.getText() + "', telephone = '" + tf_Telephone.getText() + "' where id = '" + id + "'";
 
-                //System.out.println(update);
                 statement.executeUpdate(update);
 
             } catch(SQLException e1){
@@ -116,6 +122,7 @@ public class App extends Application{
             }
         });
 
+        //Insert new entry
         btnInsert.setOnAction(e->{
             try {
 
@@ -124,17 +131,6 @@ public class App extends Application{
                 tf_last.getText() + "', '" + tf_first.getText() +
                         "', '" + tf_mi.getText() + "', '" + tf_address.getText() + "', '" + tf_city.getText() +
                         "', '" + tf_State.getText() + "', '" + tf_Telephone.getText() +"')";
-                //        "?,?,?,?,?,?,?,?)";
-
-                //PreparedStatement preparedStatement = connection.prepareStatement(insert);
-                //preparedStatement.setString(1, tf_id.getText());
-                //preparedStatement.setString(2, tf_last.getText());
-                //preparedStatement.setString(3, tf_first.getText());
-                //preparedStatement.setString(4, tf_mi.getText());
-                //preparedStatement.setString(5, tf_address.getText());
-                //preparedStatement.setString(6, tf_city.getText());
-                //preparedStatement.setString(7, tf_State.getText());
-                //preparedStatement.setString(8, tf_Telephone.getText());
 
                 statement.executeUpdate(insert);
                 
